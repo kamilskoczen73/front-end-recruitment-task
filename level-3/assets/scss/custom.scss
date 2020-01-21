@@ -1,0 +1,224 @@
+/*!
+ * Bootstrap v4.3.1 (https://getbootstrap.com/)
+ * Copyright 2011-2019 The Bootstrap Authors
+ * Copyright 2011-2019 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+@import "functions";
+@import "variables";
+@import "mixins";
+@import "root";
+@import "reboot";
+@import "type";
+@import "images";
+@import "code";
+@import "grid";
+@import "tables";
+@import "forms";
+@import "buttons";
+@import "transitions";
+@import "dropdown";
+@import "button-group";
+@import "input-group";
+@import "custom-forms";
+@import "nav";
+@import "navbar";
+@import "card";
+@import "breadcrumb";
+@import "pagination";
+@import "badge";
+@import "jumbotron";
+@import "alert";
+@import "progress";
+@import "media";
+@import "list-group";
+@import "close";
+@import "toasts";
+@import "modal";
+@import "tooltip";
+@import "popover";
+@import "carousel";
+@import "spinners";
+@import "utilities";
+@import "print";
+
+body {
+    color: $blue
+}
+
+$containerBgColor: #F0F0F0;
+$fontColor: #121212;
+$colsBgColor:white;
+$buttonBgColor:#E4C1AE;
+$buttonFontColor:white;
+$headingFontColor:#121212;
+$descriptionFontColor:#121212;
+
+@mixin textSettings($marginTop,$marginLeft,$fontSize){
+    margin-top: $marginTop;
+    margin-left: $marginLeft;
+    font-size: $fontSize;
+}
+
+.container {
+	background: $containerBgColor;
+	font-family: 'Roboto', sans-serif;
+	color: $fontColor;
+	margin: auto;
+	padding: 30px;
+	display: flex;
+	align-items: center;
+}
+.mainrow{
+	padding:auto;
+}
+.cols{
+
+	background: $colsBgColor;
+
+}
+.colleft{
+	margin-left: auto;
+
+}
+.colright{
+	margin-right: auto;
+
+}
+.mainimg{
+	top: 100px;
+	left: 70px;
+	width: 570px;
+	height: 408px;
+	opacity: 1;
+}
+.mainbtn{
+	background-color: $buttonBgColor;
+	border: none;
+	border-radius: 25px;
+	width: 135px;
+	height: 47px;
+	color: $buttonFontColor;
+	opacity: 1;
+	position: absolute;
+	right: 110px;
+
+}
+.heading{
+	text-align: left;
+	letter-spacing: 0;
+	color: $headingFontColor;
+	margin-top: 86px;
+	margin-left: 110px;
+	opacity: 1;
+}
+.description{
+	text-align: left;
+	letter-spacing: 0;
+	color: $descriptionFontColor;
+	opacity: 1;
+	margin-top: 43px;
+	margin-left: 110px;
+	width: 350px;
+	left: 70px;
+}
+
+@media (min-width: 1200px) {
+	.container {
+		max-width: 1200px;
+		height: 608px;
+		align-items: center;
+	}
+	.cols {
+		min-width: 570px;
+		height: 407px;
+	}
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+	.container {
+		min-width: 100%;
+		height: 400px;
+		padding: 30px;
+	}
+	.cols {
+		min-width: 50%;
+		min-height: auto;
+	}
+	.mainimg {
+		width: 100%;
+		height: auto;
+	}
+
+
+	.heading {
+        @include textSettings(30px,30px,32px);
+		// margin-top: 30px;
+		// margin-left: 30px;
+		// font-size: 32px;
+	}
+
+	.description {
+        @include textSettings(10px,30px,16px);
+		// margin-top: 10px;
+		// margin-left: 30px;
+		// font-size: 16px;
+		width: 300px;
+	}
+
+	.mainbtn {
+		width: 90px;
+		height: 31px;
+		font-size: 12px;
+		right: 40px;
+		bottom: 30px;
+	}
+}
+
+@media (max-width: 768px) {
+	.container {
+		min-width: 100%;
+		min-height: auto ;
+		padding: 20px;
+	}
+	.cols {
+		max-width: 100%;
+		min-height: auto;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.mainimg {
+		width: 100%;
+		height: auto;
+	}
+
+	.colleft {
+		height: auto;
+	}
+	.colright {
+		height: auto;
+	}
+
+	.heading {
+        @include textSettings(10px, 20px, 32px);
+		// margin-top: 10px;
+		// margin-left: 20px;
+		// font-size: 32px;
+	}
+
+	.description {
+        @include textSettings(10px, 20px, 20px);
+		// margin-top: 10px;
+		// margin-left: 20px;
+		// font-size: 20px;
+		max-width: 230px;
+	}
+
+	.mainbtn {
+		width: 75px;
+		height: 25px;
+		font-size: 10px;
+		right: 10px;
+		bottom: 10px;
+	}
+}
